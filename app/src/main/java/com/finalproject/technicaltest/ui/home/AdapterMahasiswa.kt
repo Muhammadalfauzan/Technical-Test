@@ -1,5 +1,6 @@
 package com.finalproject.technicaltest.ui.home
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,16 +27,15 @@ class AdapterMahasiswa(private var mahasiswaList: List<Mahasiswa>) : RecyclerVie
         fun bind(mahasiswa: Mahasiswa) {
             binding.tvName.text = mahasiswa.name
             binding.tvAddress.text = mahasiswa.address
-            // Gunakan library Glide untuk memuat gambar
             Glide.with(binding.ivPhoto.context)
                 .load(mahasiswa.photo)
                 .into(binding.ivPhoto)
         }
     }
 
-    // Fungsi untuk memperbarui data di Adapter
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(newList: List<Mahasiswa>) {
         mahasiswaList = newList
-        notifyDataSetChanged() // Notifikasi perubahan data agar RecyclerView memperbarui tampilannya
+        notifyDataSetChanged()
     }
 }

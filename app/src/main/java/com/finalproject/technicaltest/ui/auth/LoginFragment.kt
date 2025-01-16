@@ -1,5 +1,6 @@
 package com.finalproject.technicaltest.ui.auth
 
+import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.os.Handler
@@ -14,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.finalproject.technicaltest.R
 import com.finalproject.technicaltest.databinding.FragmentLoginBinding
+import com.finalproject.technicaltest.ui.home.MainActivity
 import com.google.android.material.textfield.TextInputLayout
 
 
@@ -84,6 +86,10 @@ class LoginFragment : Fragment() {
 
             username == "alfagift-admin" && password == "asdf" -> {
                 Toast.makeText(requireContext(), "Login Successful", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
             }
 
             else -> {

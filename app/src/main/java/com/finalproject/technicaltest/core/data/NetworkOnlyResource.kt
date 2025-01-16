@@ -11,25 +11,23 @@ import kotlinx.coroutines.flow.flowOn
 abstract class NetworkOnlyResource<ResultType> {
 
     fun asFlow(): Flow<Resource<ResultType>> = flow {
-        emit(Resource.Loading()) // Emit loading state
+        emit(Resource.Loading())
 
-        // Proses API call dan tangani hasilnya
         when (val apiResponse = createCall().first()) {
             is ApiResponse.Success -> {
-                emit(Resource.Success(apiResponse.data)) // Jika sukses, emit data
+                emit(Resource.Success(apiResponse.data))
             }
             is ApiResponse.Empty -> {
-                emit(Resource.Error("No data found")) // Jika kosong, emit pesan kesalahan
+                emit(Resource.Error("No data found"))
             }
             is ApiResponse.Error -> {
-                emit(Resource.Error(apiResponse.errorMessage)) // Emit pesan kesalahan dari API
+                emit(Resource.Error(apiResponse.errorMessage))
             }
         }
     }.catch { e ->
-        emit(Resource.Error("An unexpected error occurred: ${e.localizedMessage}")) // Tangkap kesalahan lainnya
+        emit(Resource.Error("An unexpected error occurred: ${e.localizedMessage}"))
     }.flowOn(Dispatchers.IO)
 
-    // Fungsi abstrak untuk memanggil API
     protected abstract suspend fun createCall(): Flow<ApiResponse<ResultType>>
 }
 

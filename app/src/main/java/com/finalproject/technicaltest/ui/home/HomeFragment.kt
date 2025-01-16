@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -31,15 +31,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize the RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // Observe LiveData from ViewModel for state changes
         mahasiswaViewModel.mahasiswaData.observe(viewLifecycleOwner) { resource ->
             handleResourceState(resource)
         }
 
-        // Trigger data fetching when fragment is ready
         mahasiswaViewModel.getAllMahasiswa()
     }
 

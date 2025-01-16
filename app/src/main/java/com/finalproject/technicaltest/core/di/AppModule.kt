@@ -12,7 +12,6 @@ import dagger.hilt.android.scopes.ViewModelScoped
 @InstallIn(ViewModelComponent::class)
 abstract class AppModule {
 
-    // Tambahkan binding untuk MahasiswaUseCase dan MahasiswaInteractor
     @Binds
     @ViewModelScoped
     abstract fun provideMahasiswaUseCase(mahasiswaInteractor: MahasiswaInteractor): MahasiswaUseCase

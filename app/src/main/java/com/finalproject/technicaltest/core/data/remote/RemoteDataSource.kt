@@ -1,6 +1,5 @@
 package com.finalproject.technicaltest.core.data.remote
 
-import android.util.Log
 import com.finalproject.technicaltest.core.remote.ApiResponse
 import com.finalproject.technicaltest.core.response.Mahasiswa
 import com.finalproject.technicaltest.core.remote.ApiService
@@ -9,8 +8,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import retrofit2.HttpException
-import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
