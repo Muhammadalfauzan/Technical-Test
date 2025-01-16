@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment
 import com.finalproject.technicaltest.R
 import com.finalproject.technicaltest.databinding.FragmentLoginBinding
 import com.google.android.material.textfield.TextInputLayout
+import dagger.hilt.android.AndroidEntryPoint
+
 
 class LoginFragment : Fragment() {
 
