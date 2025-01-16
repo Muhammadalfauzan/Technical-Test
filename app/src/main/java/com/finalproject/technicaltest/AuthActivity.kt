@@ -1,8 +1,7 @@
-package com.finalproject.technicaltest.ui
+package com.finalproject.technicaltest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.finalproject.technicaltest.R
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

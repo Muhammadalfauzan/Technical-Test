@@ -1,9 +1,8 @@
-package com.finalproject.technicaltest.data.domain.usecase
+package com.finalproject.technicaltest.core.domain.usecase
 
-import com.finalproject.technicaltest.data.Resource
-import com.finalproject.technicaltest.data.domain.repository.MahasiswaRepository
-import com.finalproject.technicaltest.data.remote.ApiResponse
-import com.finalproject.technicaltest.data.response.Mahasiswa
+import com.finalproject.technicaltest.core.data.Resource
+import com.finalproject.technicaltest.core.domain.repository.MahasiswaRepository
+import com.finalproject.technicaltest.core.response.Mahasiswa
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

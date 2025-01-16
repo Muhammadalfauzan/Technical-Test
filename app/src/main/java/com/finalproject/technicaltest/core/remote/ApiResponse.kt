@@ -1,4 +1,4 @@
-package com.finalproject.technicaltest.data.remote
+package com.finalproject.technicaltest.core.remote
 
 sealed class ApiResponse<out R> {
     data class Success<out T>(val data: T) : ApiResponse<T>()

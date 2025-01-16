@@ -1,4 +1,4 @@
-package com.finalproject.technicaltest.data.response
+package com.finalproject.technicaltest.core.response
 
 data class Mahasiswa(
     val name: String,

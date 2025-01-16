@@ -1,7 +1,7 @@
-package com.finalproject.technicaltest.data
+package com.finalproject.technicaltest.core.di
 
-import com.finalproject.technicaltest.data.domain.usecase.MahasiswaInteractor
-import com.finalproject.technicaltest.data.domain.usecase.MahasiswaUseCase
+import com.finalproject.technicaltest.core.domain.usecase.MahasiswaInteractor
+import com.finalproject.technicaltest.core.domain.usecase.MahasiswaUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

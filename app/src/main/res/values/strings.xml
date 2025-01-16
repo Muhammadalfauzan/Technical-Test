@@ -18,4 +18,6 @@
     <string name="contact_list">Contact List</string>
     <string name="button_back">Button Back</string>
     <string name="disabled">Masuk</string>
+    <string name="name_mahasiswa">Nama Mahasiswa</string>
+    <string name="alamat_mahasiswa">Alamat Mahasiswa</string>
 </resources>

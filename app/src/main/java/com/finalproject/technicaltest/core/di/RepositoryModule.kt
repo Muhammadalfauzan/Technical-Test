@@ -1,6 +1,7 @@
-package com.finalproject.technicaltest.data
+package com.finalproject.technicaltest.core.di
 
-import com.finalproject.technicaltest.data.domain.repository.MahasiswaRepository
+import com.finalproject.technicaltest.core.MahasiswaRepositoryImpl
+import com.finalproject.technicaltest.core.domain.repository.MahasiswaRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

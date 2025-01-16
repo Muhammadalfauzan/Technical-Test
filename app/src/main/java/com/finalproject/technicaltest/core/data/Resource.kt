@@ -1,4 +1,4 @@
-package com.finalproject.technicaltest.data
+package com.finalproject.technicaltest.core.data
 
 sealed class Resource<T>(
     val data: T? = null,

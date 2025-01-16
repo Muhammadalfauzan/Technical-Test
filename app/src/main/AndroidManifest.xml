@@ -14,7 +14,7 @@
         android:theme="@style/Theme.TechnicalTest"
         tools:targetApi="31">
         <activity
-            android:name=".ui.AuthActivity"
+            android:name=".AuthActivity"
             android:exported="true" >
 
         </activity>

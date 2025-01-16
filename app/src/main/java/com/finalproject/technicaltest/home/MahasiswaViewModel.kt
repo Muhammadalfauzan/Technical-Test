@@ -1,13 +1,14 @@
-package com.finalproject.technicaltest.ui
+package com.finalproject.technicaltest.home
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.finalproject.technicaltest.data.Resource
-import com.finalproject.technicaltest.data.domain.usecase.MahasiswaUseCase
-import com.finalproject.technicaltest.data.response.Mahasiswa
+import com.finalproject.technicaltest.core.data.Resource
+import com.finalproject.technicaltest.core.domain.usecase.MahasiswaUseCase
+import com.finalproject.technicaltest.core.response.Mahasiswa
 import kotlinx.coroutines.launch
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -24,11 +25,13 @@ class MahasiswaViewModel @Inject constructor(
         _mahasiswaData.value = Resource.Loading()
         viewModelScope.launch {
             homeUseCase.getAllMahasiswa().collect { resource ->
+                Log.d("MahasiswaViewModel", "Resource received: $resource")
                 _mahasiswaData.value = resource
             }
         }
     }
 }
+
 
 
 

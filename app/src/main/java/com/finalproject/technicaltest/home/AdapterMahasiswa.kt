@@ -1,10 +1,10 @@
-package com.finalproject.technicaltest.ui
+package com.finalproject.technicaltest.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.finalproject.technicaltest.data.response.Mahasiswa
+import com.finalproject.technicaltest.core.response.Mahasiswa
 import com.finalproject.technicaltest.databinding.ItemListMahasiswaBinding
 
 class AdapterMahasiswa(private var mahasiswaList: List<Mahasiswa>) : RecyclerView.Adapter<AdapterMahasiswa.MahasiswaViewHolder>() {

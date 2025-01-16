@@ -70,4 +70,5 @@ dependencies {
     implementation(libs.androidx.lifecycle.lifecycle.viewmodel.ktx)
     implementation("androidx.work:work-runtime-ktx:2.10.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
 }
