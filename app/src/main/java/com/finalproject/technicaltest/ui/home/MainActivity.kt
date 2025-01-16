@@ -1,10 +1,10 @@
-package com.finalproject.technicaltest
+package com.finalproject.technicaltest.ui.home
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.finalproject.technicaltest.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

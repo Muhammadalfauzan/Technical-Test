@@ -1,4 +1,4 @@
-package com.finalproject.technicaltest.home
+package com.finalproject.technicaltest.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

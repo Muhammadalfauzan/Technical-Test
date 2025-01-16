@@ -32,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/alamat_mahasiswa"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="16dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
